@@ -1,0 +1,11 @@
+index.html.erb
+
+<ul>
+  <% @recordings.each do |recording| %>
+    <li><%= recording.name %></li>
+    <li><%= recording.gender %></li>
+    <li><%= recording.language %></li>
+    <li><%= recording.description %></li>
+    <li><%= recording.photos %></li>
+  <% end %>
+</ul>

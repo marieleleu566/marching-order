@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+test = Recording.create!(gender: 'female', language: 'french', name: 'marie leleu', description: 'this is a')
+mariephoto = URI.open('https://res.cloudinary.com/marie-leleu/image/upload/v1605617349/avatar_x0zas8.jpg')
+test.photos.attach(io: mariephoto, filename: 'marie.jpg', content_type: 'image/jpg')
+test.save
